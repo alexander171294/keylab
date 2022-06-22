@@ -4,6 +4,7 @@
     padding: 3px 0px;
     width: fit-content;
     .whiteKey {
+      cursor: pointer;
         display: block;
         width: 30px;
         height: 100%;
@@ -11,6 +12,7 @@
         margin: 0px 1px;
         position: relative;
         .bemol {
+          cursor: pointer;
             width: 20px;
             height: 70%;
             background: black;

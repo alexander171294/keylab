@@ -1,21 +1,21 @@
 <div class="octava keyset">
-    <div class="do whiteKey" [class.active]="pressed[cstart]">
+    <div class="do whiteKey" [class.active]="pressed[cstart]" (click)="fakeEvent(cstart)">
     </div>
-    <div class="re whiteKey" [class.active]="pressed[cstart+2]">
-        <div class="re bemol" [class.active]="pressed[cstart+1]"></div>
+    <div class="re whiteKey" [class.active]="pressed[cstart+2]" (click)="fakeEvent(cstart+2)">
+        <div class="re bemol" [class.active]="pressed[cstart+1]" (click)="fakeEvent(cstart+1)"></div>
     </div>
-    <div class="mi whiteKey" [class.active]="pressed[cstart+4]">
-        <div class="mi bemol" [class.active]="pressed[cstart+3]"></div>
+    <div class="mi whiteKey" [class.active]="pressed[cstart+4]" (click)="fakeEvent(cstart+4)">
+        <div class="mi bemol" [class.active]="pressed[cstart+3]" (click)="fakeEvent(cstart+3)"></div>
     </div>
-    <div class="fa whiteKey" [class.active]="pressed[cstart+5]">
+    <div class="fa whiteKey" [class.active]="pressed[cstart+5]" (click)="fakeEvent(cstart+5)">
     </div>
-    <div class="sol whiteKey" [class.active]="pressed[cstart+7]">
-        <div class="sol bemol" [class.active]="pressed[cstart+6]"></div>
+    <div class="sol whiteKey" [class.active]="pressed[cstart+7]" (click)="fakeEvent(cstart+7)">
+        <div class="sol bemol" [class.active]="pressed[cstart+6]" (click)="fakeEvent(cstart+6)"></div>
     </div>
-    <div class="la whiteKey" [class.active]="pressed[cstart+9]">
-        <div class="la bemol" [class.active]="pressed[cstart+8]"></div>
+    <div class="la whiteKey" [class.active]="pressed[cstart+9]" (click)="fakeEvent(cstart+9)">
+        <div class="la bemol" [class.active]="pressed[cstart+8]" (click)="fakeEvent(cstart+8)"></div>
     </div>
-    <div class="si whiteKey" [class.active]="pressed[cstart+11]">
-        <div class="si bemol" [class.active]="pressed[cstart+10]"></div>
+    <div class="si whiteKey" [class.active]="pressed[cstart+11]" (click)="fakeEvent(cstart+11)">
+        <div class="si bemol" [class.active]="pressed[cstart+10]" (click)="fakeEvent(cstart+10)"></div>
     </div>
 </div>

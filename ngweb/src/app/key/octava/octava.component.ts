@@ -29,4 +29,21 @@ export class OctavaComponent implements OnInit {
     }
   }
 
+  fakeEvent(keyNumber: number) {
+    this.dispatchEvent(keyNumber, 100);
+    setTimeout(() => {
+      this.dispatchEvent(keyNumber, 0);
+    }, 100);
+  }
+
+  dispatchEvent(keyNumber: number, pressure: number) {
+    const event = new CustomEvent('MidiKeyPress', { detail: {
+      midiType: 144,
+      keyPressed: keyNumber,
+      pressure: pressure,
+      deviceName: 'VirtualKeyboard'
+    } });
+    window.dispatchEvent(event);
+  }
+
 }
