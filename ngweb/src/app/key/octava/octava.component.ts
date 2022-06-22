@@ -29,7 +29,8 @@ export class OctavaComponent implements OnInit {
     }
   }
 
-  fakeEvent(keyNumber: number) {
+  fakeEvent(keyNumber: number, evt: MouseEvent) {
+    evt.stopPropagation();
     this.dispatchEvent(keyNumber, 100);
     setTimeout(() => {
       this.dispatchEvent(keyNumber, 0);

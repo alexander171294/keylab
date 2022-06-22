@@ -1,0 +1,28 @@
+.staff {
+  width: calc(100% - 30px);
+  margin: 15px;
+  background: white;
+  border: 1px solid #c3c3c3;
+  position: relative;
+  padding: 50px 0px;
+  .line {
+    height: 20px;
+    border-bottom: 1px solid black;
+    &:last-child {
+      border-bottom: 0px;
+    }
+  }
+  .key {
+    position: absolute;
+    &.sol {
+      position: absolute;
+      font-size: 100px;
+      bottom: 50px;
+    }
+    &.fa {
+      position: absolute;
+      font-size: 100px;
+      bottom: 52px;
+    }
+  }
+}
