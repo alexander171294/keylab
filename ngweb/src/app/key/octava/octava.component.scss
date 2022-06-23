@@ -17,5 +17,8 @@
             position: absolute;
             left: -10px;
         }
+        &.active {
+            background-color: red;
+        }
     }
 }

@@ -53,7 +53,7 @@ const {
       pressure,
       deviceName
     } });
-    document.window.dispatchEvent(event);
+    window.dispatchEvent(event);
     // document.getElementById("divStatusMessages").innerHTML = `${e.srcElement.name}: [${e.data[0]},${e.data[1]},${e.data[2]}]`;
   }
   

@@ -1,3 +1,4 @@
+import { KeyDetail } from './keyDetail';
 import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
@@ -14,8 +15,8 @@ export class KeyComponent implements OnInit {
 
   @HostListener('window:MidiKeyPress', ['$event'])
   handleKeyDown(event: any) {
-    console.warn(event);
-    alert(event.detail)
+    const kd = event.detail as KeyDetail;
+    console.warn(kd);
   }
 
 }
