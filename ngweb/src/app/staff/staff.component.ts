@@ -46,6 +46,12 @@ export class StaffComponent implements OnInit {
       lifes: 2
     },
     {
+      fn: () => this.randomWhites(),
+      speed: 800,
+      quantity: 30,
+      lifes: 2
+    },
+    {
       fn: () => this.randomWhitesExtended(),
       speed: 2400,
       quantity: 40,
@@ -61,6 +67,12 @@ export class StaffComponent implements OnInit {
       fn: () => this.randomWhitesExtended(),
       speed: 1200,
       quantity: 60,
+      lifes: 2
+    },
+    {
+      fn: () => this.randomWhitesExtended(),
+      speed: 800,
+      quantity: 30,
       lifes: 2
     },
     {
@@ -82,6 +94,12 @@ export class StaffComponent implements OnInit {
       lifes: 2
     },
     {
+      fn: () => this.randomBetween(60, 72),
+      speed: 800,
+      quantity: 30,
+      lifes: 2
+    },
+    {
       fn: () => this.randomBetween(56, 84),
       speed: 2800,
       quantity: 40,
@@ -97,6 +115,12 @@ export class StaffComponent implements OnInit {
       fn: () => this.randomBetween(56, 84),
       speed: 1000,
       quantity: 20,
+      lifes: 2
+    },
+    {
+      fn: () => this.randomBetween(56, 84),
+      speed: 600,
+      quantity: 80,
       lifes: 2
     }
   ];
