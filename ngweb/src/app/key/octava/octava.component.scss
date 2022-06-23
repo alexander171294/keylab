@@ -1,0 +1,21 @@
+.keyset {
+    display: flex;
+    height: 150px;
+    padding: 3px 0px;
+    width: fit-content;
+    .whiteKey {
+        display: block;
+        width: 30px;
+        height: 100%;
+        background: white;
+        margin: 0px 1px;
+        position: relative;
+        .bemol {
+            width: 20px;
+            height: 70%;
+            background: black;
+            position: absolute;
+            left: -10px;
+        }
+    }
+}

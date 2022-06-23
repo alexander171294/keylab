@@ -17,26 +17,26 @@ const {
   function refreshDom() {
     // for each I/O device populate dropdowns.
   
-    let divInputDevices = document.getElementById("divInputDevices");
-    divInputDevices.innerHTML = ""; // clear old DOM
-    for (let input of electronMidi.inputs.values()) {
-      var device = document.createElement("div");
-      device.innerHTML = input.name;
-      device.classList.add('device');
-      divInputDevices.appendChild(device);
-    }
+    // let divInputDevices = document.getElementById("divInputDevices");
+    // divInputDevices.innerHTML = ""; // clear old DOM
+    // for (let input of electronMidi.inputs.values()) {
+    //   var device = document.createElement("div");
+    //   device.innerHTML = input.name;
+    //   device.classList.add('device');
+    //   divInputDevices.appendChild(device);
+    // }
   
-    let divOutputDevices = document.getElementById("divOutputDevices");
-    divOutputDevices.innerHTML = ""; // clear old DOM
-    for (let output of electronMidi.outputs.values()) {
-      var device = document.createElement("div");
-      device.innerHTML = output.name;
-      device.classList.add('device');
-      divOutputDevices.appendChild(device);
-    }
+    // let divOutputDevices = document.getElementById("divOutputDevices");
+    // divOutputDevices.innerHTML = ""; // clear old DOM
+    // for (let output of electronMidi.outputs.values()) {
+    //   var device = document.createElement("div");
+    //   device.innerHTML = output.name;
+    //   device.classList.add('device');
+    //   divOutputDevices.appendChild(device);
+    // }
   
   
-    document.getElementById("divStatusMessages").innerHTML = `Device list updated [${getTime()}]`;
+    // document.getElementById("divStatusMessages").innerHTML = `Device list updated [${getTime()}]`;
   };
   
   function showInputMessage(e) {
@@ -47,7 +47,14 @@ const {
     const keyPressed = e.data[1];
     const pressure = e.data[2];
     const deviceName = e.srcElement.name;
-    document.getElementById("divStatusMessages").innerHTML = `${e.srcElement.name}: [${e.data[0]},${e.data[1]},${e.data[2]}]`;
+    const event = new CustomEvent('MidiKeyPress', { detail: {
+      midiType,
+      keyPressed,
+      pressure,
+      deviceName
+    } });
+    document.window.dispatchEvent(event);
+    // document.getElementById("divStatusMessages").innerHTML = `${e.srcElement.name}: [${e.data[0]},${e.data[1]},${e.data[2]}]`;
   }
   
   
@@ -58,11 +65,11 @@ const {
     return time;
   }
   
-  document.getElementById("btnLearn").addEventListener("click", () => {
-    document.getElementById("divLearnInput").innerHTML = 'Now press any button on your Midi Device to learn it';
+  // document.getElementById("btnLearn").addEventListener("click", () => {
+  //   document.getElementById("divLearnInput").innerHTML = 'Now press any button on your Midi Device to learn it';
   
-    electronMidi.learn()
-      .then((result) => {
-        document.getElementById("divLearnInput").innerHTML = `Learnt: ${result.input}:[${result.data[0]},${result.data[1]},${result.data[2]}]`;
-      });
-  });
+  //   electronMidi.learn()
+  //     .then((result) => {
+  //       document.getElementById("divLearnInput").innerHTML = `Learnt: ${result.input}:[${result.data[0]},${result.data[1]},${result.data[2]}]`;
+  //     });
+  // });
