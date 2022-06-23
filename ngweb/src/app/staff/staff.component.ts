@@ -148,6 +148,7 @@ export class StaffComponent implements OnInit {
         this.checkWinStage();
       } else {
         this.lifes--;
+        this.totalKeys--;
         if(this.lifes <= 0) {
           this.onLose();
         }
@@ -213,6 +214,7 @@ export class StaffComponent implements OnInit {
       note.stop();
     });
     this.playing = false;
+    this.totalKeys -= this.lifes;
   }
 
   private generateStage(x: number) {
