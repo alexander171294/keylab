@@ -1,0 +1,26 @@
+{
+  "name": "keylab",
+  "version": "1.0.0",
+  "description": "App for me to learn piano key with midi connection",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexander171294/keylab.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexander171294/keylab/issues"
+  },
+  "homepage": "https://github.com/alexander171294/keylab#readme",
+  "devDependencies": {
+    "electron": "^19.0.6"
+  },
+  "dependencies": {
+    "electron-midi": "^0.1.3"
+  }
+}
