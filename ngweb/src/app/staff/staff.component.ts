@@ -142,6 +142,7 @@ export class StaffComponent implements OnInit {
     this.startStage(0);
     this.lifes = 5;
     this.calcHearts();
+    this.lose = false;
   }
 
   private calcHearts() {
