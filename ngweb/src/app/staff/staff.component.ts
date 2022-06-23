@@ -172,6 +172,7 @@ export class StaffComponent implements OnInit {
     this.newNotes = stage.notes;
     const speed = stage.speed;
     this.respawnLifes = stage.lifes;
+    this.lifes = this.respawnLifes;
     this.stageInterval = setInterval( () => {
       this.notes.push(new NoteData(this.newNotes[0], speed, () => this.onLose()));
       this.newNotes.shift();
