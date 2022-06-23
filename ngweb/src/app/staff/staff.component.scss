@@ -1,16 +1,67 @@
 .staff {
   width: calc(100% - 30px);
   margin: 15px;
+  margin-top: 35px;
   background: white;
   border: 1px solid #c3c3c3;
   position: relative;
   padding: 50px 0px;
+  height: 125px;
+  .nextStage {
+    width: 100%;
+    height: 225px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: #00000059;
+    section {
+      position: absolute;
+      height: 50px;
+      background: #d0f3d0;
+      color: green;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 25px;
+      border-radius: 10px;
+    }
+  }
+  .losePopup {
+    text-align: center;
+    color: red;
+    font-family: Helvetica;
+    position: absolute;
+    width: 100%;
+    top: 25px;
+  }
+  nav {
+    position: absolute;
+    top: -37px;
+    height: 35px;
+    width: 100%;
+    background: #ededed;
+    border: 1px solid #c3c3c3;
+    span {
+      margin-left: 5px;
+    }
+    .lifes {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      width: 120px;
+      span {
+        color: red;
+      }
+    }
+  }
   .line {
     height: 20px;
     border-bottom: 1px solid black;
-    &:last-child {
-      border-bottom: 0px;
-    }
   }
   .key {
     position: absolute;
@@ -25,4 +76,113 @@
       bottom: 52px;
     }
   }
+  .gameArea {
+    height: 224px;
+    position: absolute;
+    top: 0px;
+    width: calc(100% - 72px);
+    left: 70px;
+    border-left: 2px dotted red;
+    overflow: hidden;
+    .nota {
+      font-size: 60px;
+      height: 50px;
+      line-height: 45px;
+      width: 30px;
+      position: absolute;
+      &.out::after {
+        content: "";
+        display: block;
+        background: black;
+        width: 100%;
+        height: 1px;
+        bottom: 13px;
+        position: absolute;
+      }
+    }
+    &.sol {
+      .nota {
+        span {
+          position: absolute;
+          font-size: 25px;
+          bottom: 10px;
+          left: -4px;
+        }
+        &.k58, &.k57 {
+          bottom: 14px;
+          &::before {
+            content: "";
+            display: block;
+            background: black;
+            width: 100%;
+            height: 1px;
+            bottom: 33px;
+            position: absolute;
+          }
+        }
+        &.k59 {
+          bottom: 26px;
+          &::before {
+            content: "";
+            display: block;
+            background: black;
+            width: 100%;
+            height: 1px;
+            bottom: 23px;
+            position: absolute;
+          }
+        }
+        &.k60, &.k61 {
+          bottom: 36px;
+        }
+        &.k62, &.k63 {
+          bottom: 46px;
+        }
+        &.k64 {
+          bottom: 56px;
+        }
+        &.k65, &.k66 {
+          bottom: 67px;
+        }
+        &.k67, &.k68 {
+          bottom: 78px;
+        }
+        &.k69, &.k70 {
+          bottom: 88px;
+        }
+        &.k71 {
+          bottom: 98px;
+        }
+        &.k72, &.k73 {
+          bottom: 109px;
+        }
+        &.k74, &.k75 {
+          bottom: 120px;
+        }
+        &.k76 {
+          bottom: 130px;
+        }
+        &.k77, &.k78 {
+          bottom: 140px;
+        }
+        &.k79, &.k80 {
+          bottom: 150px;
+        }
+        &.k81, &.k82 {
+          bottom: 160px;
+        }
+      }
+    }
+  }
+}
+
+button {
+  margin: 5px;
+  border: 1px solid gray;
+  border-radius: 3px;
+  padding: 3px;
+  font-family: Helvetica;
+  box-shadow: 0px 0px 5px #00000063;
+  font-size: 14px;
+  cursor: pointer;
 }

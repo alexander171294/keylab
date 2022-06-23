@@ -1,4 +1,13 @@
 <div class="staff">
+  <nav>
+    <button (click)="restart()">Restart game</button>
+    <span>Total keys: {{totalKeys}}</span>
+    <div class="lifes">Lifes: <span>{{hearts}}</span></div>
+  </nav>
+  <div class="losePopup" *ngIf="lose">
+    Oh no!
+    you lose with <b>{{totalKeys}} points</b>.
+  </div>
   <div class="key sol">𝄞</div>
   <!-- <div class="key fa">𝄢</div> -->
   <div class="line"></div>
@@ -6,5 +15,16 @@
   <div class="line"></div>
   <div class="line"></div>
   <div class="line"></div>
-  <div class="line"></div>
+  <div class="gameArea sol">
+    <div *ngFor="let key of notes" [class.out]="key.keyValue == 60 || key.keyValue == 61 || key.keyValue == 84 || key.keyValue == 58 || key.keyValue == 57" class="nota {{key.className}}" [style.left]="key.percentRest + '%'">
+      <span *ngIf="key.keySostenido">♯</span>
+      ♩
+    </div>
+  </div>
+  <div class="nextStage" *ngIf="showNextStage">
+    <section>
+      You won this stage!
+      <button (click)="next()">Next stage</button>
+    </section>
+  </div>
 </div>
