@@ -3,11 +3,9 @@ const {
     shell
   } = require('electron');
   
-  //open links externally by default
-  const linksToBrowser = require('electron-hyperlinks-to-browser')
   
   /* require the electron-midi module for testing (relative path): */
-  const ElectronMidi = require('./../')
+  const ElectronMidi = require('electron-midi')
   /* require the electron-midi module for testing (node_modules path): */
   //const ElectronMidi = require('electron-midi')
   const electronMidi = new ElectronMidi();
@@ -42,6 +40,13 @@ const {
   };
   
   function showInputMessage(e) {
+    if(e.data[0] !== 144) {
+        return;
+    }
+    const midiType = e.data[0];
+    const keyPressed = e.data[1];
+    const pressure = e.data[2];
+    const deviceName = e.srcElement.name;
     document.getElementById("divStatusMessages").innerHTML = `${e.srcElement.name}: [${e.data[0]},${e.data[1]},${e.data[2]}]`;
   }
   
