@@ -23,67 +23,80 @@ export class StaffComponent implements OnInit {
     {
       fn: () => this.randomWhites(),
       speed: 3000,
-      quantity: 5
+      quantity: 5,
+      lifes: 5
     },
     {
       fn: () => this.randomWhites(),
       speed: 3000,
-      quantity: 40
+      quantity: 40,
+      lifes: 3
     },
     {
       fn: () => this.randomWhites(),
       speed: 2000,
-      quantity: 30
+      quantity: 30,
+      lifes: 3
     },
     {
       fn: () => this.randomWhites(),
       speed: 1200,
-      quantity: 60
+      quantity: 60,
+      lifes: 2
     },
     {
       fn: () => this.randomWhitesExtended(),
-      speed: 3000,
-      quantity: 40
-    },
-    {
-      fn: () => this.randomWhitesExtended(),
-      speed: 2000,
-      quantity: 30
+      speed: 2400,
+      quantity: 40,
+      lifes: 4
     },
     {
       fn: () => this.randomWhitesExtended(),
       speed: 1800,
-      quantity: 20
+      quantity: 30,
+      lifes: 3
+    },
+    {
+      fn: () => this.randomWhitesExtended(),
+      speed: 1200,
+      quantity: 60,
+      lifes: 2
     },
     {
       fn: () => this.randomBetween(60, 72),
-      speed: 3000,
-      quantity: 40
-    },
-    {
-      fn: () => this.randomBetween(60, 72),
-      speed: 2000,
-      quantity: 30
+      speed: 2100,
+      quantity: 40,
+      lifes: 5
     },
     {
       fn: () => this.randomBetween(60, 72),
       speed: 1800,
-      quantity: 20
+      quantity: 30,
+      lifes: 3
+    },
+    {
+      fn: () => this.randomBetween(60, 72),
+      speed: 1200,
+      quantity: 60,
+      lifes: 2
     },
     {
       fn: () => this.randomBetween(56, 84),
-      speed: 3000,
-      quantity: 40
-    },
-    {
-      fn: () => this.randomBetween(56, 84),
-      speed: 2000,
-      quantity: 30
+      speed: 2800,
+      quantity: 40,
+      lifes: 3
     },
     {
       fn: () => this.randomBetween(56, 84),
       speed: 1800,
-      quantity: 20
+      quantity: 30,
+      lifes: 3
+    },
+    {
+      fn: () => this.randomBetween(56, 84),
+      speed: 1000,
+      quantity: 20,
+      lifes: 2
     }
   ];
 
