@@ -16,6 +16,9 @@
             background: black;
             position: absolute;
             left: -10px;
+            &.active {
+                background-color: brown;
+            }
         }
         &.active {
             background-color: red;

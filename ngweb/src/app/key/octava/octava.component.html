@@ -1,21 +1,21 @@
 <div class="octava keyset">
     <div class="do whiteKey" [class.active]="pressed[cstart]">
     </div>
-    <div class="re whiteKey">
-        <div class="re bemol"></div>
+    <div class="re whiteKey" [class.active]="pressed[cstart+1]">
+        <div class="re bemol" [class.active]="pressed[cstart+2]"></div>
     </div>
-    <div class="mi whiteKey">
-        <div class="mi bemol"></div>
+    <div class="mi whiteKey" [class.active]="pressed[cstart+3]">
+        <div class="mi bemol" [class.active]="pressed[cstart+4]"></div>
     </div>
-    <div class="fa whiteKey">
+    <div class="fa whiteKey" [class.active]="pressed[cstart+5]">
     </div>
-    <div class="sol whiteKey">
-        <div class="sol bemol"></div>
+    <div class="sol whiteKey" [class.active]="pressed[cstart+6]">
+        <div class="sol bemol" [class.active]="pressed[cstart+7]"></div>
     </div>
-    <div class="la whiteKey">
-        <div class="la bemol"></div>
+    <div class="la whiteKey" [class.active]="pressed[cstart+8]">
+        <div class="la bemol" [class.active]="pressed[cstart+9]"></div>
     </div>
-    <div class="si whiteKey">
-        <div class="si bemol"></div>
+    <div class="si whiteKey" [class.active]="pressed[cstart+10]">
+        <div class="si bemol" [class.active]="pressed[cstart+11]"></div>
     </div>
 </div>
