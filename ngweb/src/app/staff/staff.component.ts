@@ -19,6 +19,7 @@ export class StaffComponent implements OnInit {
   public newNotes: number[] = [];
   public currentStage = 0;
   public showNextStage = false;
+  public respawnLifes = 5;
   private readonly stages = [
     {
       fn: () => this.randomWhites(),
@@ -119,7 +120,7 @@ export class StaffComponent implements OnInit {
         this.notes[0].stop();
         this.notes.shift();
         this.totalKeys++;
-        this.lifes = 3;
+        this.lifes = this.respawnLifes;
         this.checkWinStage();
       } else {
         this.lifes--;
@@ -154,6 +155,7 @@ export class StaffComponent implements OnInit {
     this.notes = [];
     this.startStage(0);
     this.lifes = 5;
+    this.respawnLifes = 5;
     this.calcHearts();
     this.lose = false;
   }
@@ -169,6 +171,7 @@ export class StaffComponent implements OnInit {
     const stage = this.generateStage(stageX);
     this.newNotes = stage.notes;
     const speed = stage.speed;
+    this.respawnLifes = stage.lifes;
     this.stageInterval = setInterval( () => {
       this.notes.push(new NoteData(this.newNotes[0], speed, () => this.onLose()));
       this.newNotes.shift();
@@ -195,7 +198,8 @@ export class StaffComponent implements OnInit {
     }
     return {
       notes,
-      speed: stage.speed
+      speed: stage.speed,
+      lifes: stage.lifes
     }
   }
 
