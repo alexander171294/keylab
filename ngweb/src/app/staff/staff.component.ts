@@ -37,8 +37,8 @@ export class StaffComponent implements OnInit {
     },
     {
       fn: () => this.randomWhites(),
-      speed: 1800,
-      quantity: 20
+      speed: 1200,
+      quantity: 60
     },
     {
       fn: () => this.randomWhitesExtended(),
